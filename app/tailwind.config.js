@@ -18,7 +18,11 @@ export default {
         slate: {
           700: '#5C5E83',
         },
+        blue: {
+          100: '#E1EAFF',
+        },
         purple: {
+          300: '#DAB8D5',
           800: '#733E84',
           900: '#410D53',
         },

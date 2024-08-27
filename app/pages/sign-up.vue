@@ -26,7 +26,7 @@
           <AppInputCheckbox name="terms-and-conditions" label="I agree to Terms & Conditions and Privacy Policy" />
         </div>
 
-        <AppButton title="Sign Up" class="w-full mb-6" />
+        <AppButton title="Sign Up"  class="w-full mb-6" />
       </form>
 
       <div class="text-sm text-center mb-6">
@@ -38,8 +38,14 @@
         <hr class="w-full border-none h-[2px] bg-[#2631591A]" />
       </div>
 
-      <AppButton title="Login with Facebook" class="w-full mb-4" />
-      <AppButton title="Login with Google" class="w-full" />
+      <AppButton outline shadow class="w-full mb-4">
+        <img src="~/assets/icons/facebook.svg" alt="facebook-logo" class="mr-2">
+        Login with Facebook
+      </AppButton>
+      <AppButton outline shadow class="w-full" >
+        <img src="~/assets/icons/google.svg" alt="google-logo" class="mr-2">
+        Login with Google
+      </AppButton>
     </div>
   </div>
 </template>
