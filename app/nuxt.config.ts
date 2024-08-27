@@ -8,6 +8,9 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  modules: [
+    '@vee-validate/nuxt',
+  ],
   
 })
