@@ -1,6 +1,7 @@
 <template>
-  <div class="text-sm">
-    <input :id="name" type="checkbox" /> <label :for="name">{{ label }}</label>
+  <div class="text-sm flex gap-[10px] items-center">
+    <input :id="name" type="checkbox" class="w-4 h-4 accent-purple-800" />
+    <label :for="name">{{ label }}</label>
   </div>
 </template>
 

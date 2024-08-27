@@ -1,6 +1,6 @@
 <template>
   <div class="sign-up-page">
-    <div class="bg-white max-w-[500px] rounded-2xl p-11">
+    <div class="bg-white max-w-[550px] rounded-2xl p-6 lg:p-11">
       <form class=" action="">
         <h1 class="mb-4">Sign Up</h1>
 
@@ -11,7 +11,7 @@
 
           <div class="flex gap-2">
             <AppInput class="w-1/2" label="EIN" />
-            <AppInput class="w-1/2" />
+            <AppInputFile class="w-1/2" />
           </div>
 
           <AppInput label="Email" />
@@ -52,6 +52,7 @@
 
 <script setup>
 import AppInput from '@/components/ui/AppInput';
+import AppInputFile from '@/components/ui/AppInputFile';
 import AppInputCheckbox from '@/components/ui/AppInputCheckbox';
 import AppButton from '@/components/ui/AppButton';
 definePageMeta({
