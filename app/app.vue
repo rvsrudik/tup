@@ -1,3 +1,7 @@
 <template>
-  <div class="uppercase underline">nuxt app</div>
+  <div>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
