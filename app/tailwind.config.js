@@ -16,6 +16,7 @@ export default {
           100: '#F0F0F0',
         },
         slate: {
+          50: '#FBFBFE',
           700: '#5C5E83',
         },
         blue: {

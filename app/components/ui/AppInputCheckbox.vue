@@ -28,14 +28,4 @@ const { checked, handleChange, errorMessage } = useField(name, undefined, {
   type: 'checkbox',
   checkedValue: props.value,
 });
-
-// const {
-//   value: inputValue,
-//   errorMessage,
-//   handleBlur,
-//   handleChange,
-//   meta,
-// } = useField(name, undefined, {
-//   initialValue: props.value,
-// });
 </script>
