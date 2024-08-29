@@ -7,18 +7,18 @@
         <h4 class="text-center mb-8">Enter your details to connect with your town</h4>
 
         <div class="flex flex-col gap-3 mb-6">
-          <AppInput name="organization_name" label="Organization Name" />
+          <AppInput name="organization_name" placeholder="Organization Name" />
 
           <div class="flex gap-2">
-            <AppInput name="ein" class="w-1/2" label="EIN" />
+            <AppInput name="ein" class="w-1/2" placeholder="EIN" />
             <AppInputFile class="w-1/2" />
           </div>
 
-          <AppInput name="email" label="Email" />
-          <AppInput name="contact_name" label="Сontact name" />
-          <AppInput name="contact_number" label="Contact number" />
-          <AppInput name="password" label="Create password" />
-          <AppInput name="confirm_password" label="Confirm password" />
+          <AppInput name="email" placeholder="Email" />
+          <AppInput name="contact_name" placeholder="Сontact name" />
+          <AppInput name="contact_number" placeholder="Contact number" />
+          <AppInput name="password" placeholder="Create password" />
+          <AppInput name="confirm_password" placeholder="Confirm password" />
         </div>
 
         <div class="gap-4 flex flex-col mb-6">
