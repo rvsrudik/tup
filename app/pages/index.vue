@@ -7,6 +7,8 @@
       <PhotosCard />
     </div>
     <CampaignsSection />
+
+    <CreateCampaign />
   </div>
 </template>
 
@@ -16,4 +18,5 @@ import AboutCard from '@/components/profile/AboutCard';
 import PhotosCard from '@/components/profile/PhotosCard';
 import PasswordChangeSection from '@/components/profile/PasswordChangeSection';
 import CampaignsSection from '@/components/profile/CampaignsSection';
+import CreateCampaign from '@/components/modals/CreateCampaign';
 </script>

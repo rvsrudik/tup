@@ -8,27 +8,12 @@
       </button>
     </div>
 
-    <!-- <div class="flex gap-4">
-      <div class="w-[286px] h-[291px] bg-slate-200 flex justify-center items-center flex-col shadow-sm rounded-md">
-        <span class="text-sm font-bold">Add new campaign</span>
-        <img src="~/assets/icons/square-plus.svg" class="w-8 h-8 mt-2" alt="add campaign icon" />
-      </div>
-
-      <div class="w-[286px] h-[291px] bg-slate-200 flex justify-center items-center flex-col shadow-sm rounded-md">
-        <span class="text-sm font-bold">Add new campaign</span>
-        <img src="~/assets/icons/square-plus.svg" class="w-8 h-8 mt-2" alt="add campaign icon" />
-      </div>
-
-      <div class="w-[286px] h-[291px] bg-slate-200 flex justify-center items-center flex-col shadow-sm rounded-md">
-        <span class="text-sm font-bold">Add new campaign</span>
-        <img src="~/assets/icons/square-plus.svg" class="w-8 h-8 mt-2" alt="add campaign icon" />
-      </div>
-    </div> -->
-
-    <!-- <template> -->
     <carousel :items-to-show="3" wrap-around :breakpoints="{}">
       <slide v-for="slide in 10" class="px-2" :key="slide">
-        <div class="h-[291px] w-full bg-slate-200 flex justify-center items-center flex-col shadow-sm rounded-md">
+        <div
+          class="h-[291px] w-full bg-slate-200 flex justify-center items-center flex-col shadow-sm rounded-md"
+          @click="isOpen = true"
+        >
           <span class="text-sm font-bold">Add new campaign</span>
           <img src="~/assets/icons/square-plus.svg" class="w-8 h-8 mt-2" alt="add campaign icon" />
         </div>
@@ -39,11 +24,7 @@
         <pagination />
       </template>
     </carousel>
-    <!-- </template> -->
   </section>
 </template>
 
-<script setup>
-import 'vue3-carousel/dist/carousel.css';
-// import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
-</script>
+<script setup></script>
