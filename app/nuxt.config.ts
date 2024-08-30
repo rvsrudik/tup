@@ -9,8 +9,6 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: [
-    '@vee-validate/nuxt',
-  ],
+  modules: ['@vee-validate/nuxt', 'vue3-carousel-nuxt'],
   
 })

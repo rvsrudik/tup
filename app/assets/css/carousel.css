@@ -1,0 +1,31 @@
+.carousel__pagination-button::after {
+  background: #677382;
+  opacity: 20%;
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+}
+
+.carousel__pagination-button--active::after {
+  background-color: #733E84;
+  opacity: 100%;
+}
+
+.carousel__pagination {
+  margin-top: 20px
+}
+
+button.carousel__prev, button.carousel__next {
+  top: unset;
+  transform: translateY(0);
+  bottom: -7px;
+  border: 1px solid #DEE2E6;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  color: #DEE2E6
+}
+
+button.carousel__prev svg, button.carousel__next svg {
+  width: 20px;
+}
