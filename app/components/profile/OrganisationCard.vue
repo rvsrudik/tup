@@ -29,7 +29,6 @@
 import { Form } from 'vee-validate';
 import * as Yup from 'yup';
 import AppInput from '@/components/ui/AppInput';
-import AppButton from '@/components/ui/AppButton';
 import AvatarUploader from '@/components/ui/AvatarUploader';
 
 const schema = Yup.object().shape({
