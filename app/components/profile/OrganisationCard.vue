@@ -5,16 +5,11 @@
         <AvatarUploader />
       </div>
       <div class="w-full">
-        <Form :validation-schema="schema" @submit="onSubmit" @invalid-submit="onInvalidSubmit">
-          <AppInput
-            name="organization_name"
-            label="Organization Name"
-            placeholder="Enter your organisation name"
-            class="mb-2"
-          />
+        <Form :validation-schema="schema" class="grid gap-4" @submit="onSubmit" @invalid-submit="onInvalidSubmit">
+          <AppInput name="organization_name" label="Organization Name" placeholder="Enter your organisation name" />
           <AppInput name="website" label="Website" placeholder="Enter Website URL" />
 
-          <h5 class="font-bold my-4">Contact information:</h5>
+          <h5 class="font-bold">Contact information:</h5>
 
           <AppInput name="email" label="Email" placeholder="Enter Email" />
           <AppInput name="contact_number" label="Phone number" placeholder="Enter Phone number" />

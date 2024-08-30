@@ -1,6 +1,6 @@
 <template>
   <button
-    class="px-10 h-12 rounded-[120px] text-gray-50 flex items-center justify-center"
+    class="px-10 h-12 rounded-[120px] text-gray-50 flex items-center justify-center w-fit"
     :class="[...buttonBg, ...buttonColor, ...buttonBorder, ...buttonShadow]"
   >
     <slot>{{ title }}</slot>
