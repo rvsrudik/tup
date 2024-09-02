@@ -58,7 +58,7 @@
           <p class="text-xs text-gray-200">if no end date please leave this field empty</p>
         </div>
 
-        <AppButton>Next <img src="~/assets/icons/arrow-bold.svg" alt="arrow" class="ml-2" /></AppButton>
+        <AppButton size="xl">Next <img src="~/assets/icons/arrow-bold.svg" alt="arrow" class="ml-2" /></AppButton>
         <!-- <DatePicker v-model="date" is-required /> -->
         <!-- <UPopover> -->
         <!-- {{ date }} -->

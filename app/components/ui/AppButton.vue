@@ -1,7 +1,7 @@
 <template>
   <button
     class="px-10 h-12 rounded-[120px] text-gray-50 flex items-center justify-center w-fit"
-    :class="[...buttonBg, ...buttonColor, ...buttonBorder, ...buttonShadow]"
+    :class="[...buttonBg, ...buttonColor, ...buttonBorder, ...buttonShadow, ...buttonSizes[size]]"
   >
     <slot>{{ title }}</slot>
   </button>
@@ -12,6 +12,10 @@ const props = defineProps({
   title: {
     type: String,
   },
+  size: {
+    type: String,
+    default: 'base',
+  },
   outline: {
     type: Boolean,
     default: false,
@@ -21,6 +25,11 @@ const props = defineProps({
     default: false,
   },
 });
+
+const buttonSizes = {
+  base: ['h-8'],
+  xl: ['h-12'],
+};
 
 const buttonBg = computed(() => {
   return [props.outline ? 'bg-white' : 'bg-purple-800'];

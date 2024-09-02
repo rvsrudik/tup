@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-purple-900 fixed h-full md:h-auto md:relative [transition:width_300ms]"
+    class="bg-purple-900 fixed z-50 h-full md:h-auto md:relative [transition:width_300ms]"
     :class="[isOpen ? 'w-[280px] px-6' : 'w-12 px-2']"
   >
     <img src="~/assets/images/logo.svg" width="105" class="mt-4 mb-10" alt="logo" />

@@ -30,7 +30,7 @@
           />
         </div>
 
-        <AppButton title="Sign Up" class="w-full mb-6" />
+        <AppButton size="xl" title="Sign Up" class="w-full mb-6" />
       </Form>
 
       <div class="text-sm text-center mb-6">
@@ -42,11 +42,11 @@
         <hr class="w-full border-none h-[2px] bg-[#2631591A]" />
       </div>
 
-      <AppButton outline shadow class="w-full mb-4">
+      <AppButton size="xl" outline shadow class="w-full mb-4">
         <img src="~/assets/icons/facebook.svg" alt="facebook-logo" class="mr-2" />
         Login with Facebook
       </AppButton>
-      <AppButton outline shadow class="w-full">
+      <AppButton size="xl" outline shadow class="w-full">
         <img src="~/assets/icons/google.svg" alt="google-logo" class="mr-2" />
         Login with Google
       </AppButton>
