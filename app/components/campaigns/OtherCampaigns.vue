@@ -19,7 +19,7 @@
       </slide>
 
       <template #addons>
-        <navigation class="absilute top-0" />
+        <navigation />
         <pagination />
       </template>
     </carousel>

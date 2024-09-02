@@ -40,7 +40,7 @@ const buttonColor = computed(() => {
 });
 
 const buttonBorder = computed(() => {
-  return [props.outline ? 'border border-purple-300 hover:border-none' : ''];
+  return [props.outline ? 'border border-purple-300 hover:border-transparent' : ''];
 });
 
 const buttonShadow = computed(() => {

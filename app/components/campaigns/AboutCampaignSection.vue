@@ -24,11 +24,13 @@
       </p>
     </div>
 
-    <div class="flex gap-4 justify-end">
-      <AppButton size="xl" class=""
+    <PhotosSection />
+
+    <div class="flex flex-col md:flex-row gap-4 justify-end">
+      <AppButton size="xl" class="w-full md:w-auto"
         >Donate $ <img src="~/assets/icons/arrow-bold.svg" class="ml-3" alt="Arrow icon"
       /></AppButton>
-      <AppButton size="xl" outline class="">Send a message</AppButton>
+      <AppButton size="xl" outline class="w-full md:w-auto">Send a message</AppButton>
     </div>
   </section>
 </template>
@@ -36,5 +38,6 @@
 <script setup>
 import GoalChart from '@/components/campaigns/GoalChart';
 import DonatedPeopleWidget from '@/components/campaigns/DonatedPeopleWidget';
+import PhotosSection from './PhotosSection.vue';
 import AppButton from '@/components/ui/AppButton';
 </script>

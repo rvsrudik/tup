@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white rounded-xl shadow-sm p-6">
-    <div class="flex gap-10">
+    <div class="flex flex-col items-center md:items-start md:flex-row gap-10">
       <div>
         <AvatarUploader />
       </div>
