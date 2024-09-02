@@ -1,7 +1,7 @@
 <template>
   <UModal v-model="isOpen" :ui="{ base: 'h-full  !max-w-[580px] flex flex-col rounded-xl p-10' }">
     <div class="grid gap-4">
-      <h2 class="text-center text-purple-900 text-2xl font-semibold [font-family:'Montserrat']">Create campaign</h2>
+      <h2 class="text-center text-purple-900 text-2xl font-semibold font-montserrat">Create campaign</h2>
 
       <h5 class="text-center text-slate-700">Fill out the campaign info</h5>
 

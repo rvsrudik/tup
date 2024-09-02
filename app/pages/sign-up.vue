@@ -38,7 +38,7 @@
       </div>
 
       <div class="relative flex items-center justify-center mb-6">
-        <div class="absolute bg-white px-10 [font-family:'Montserrat']">or</div>
+        <div class="absolute bg-white px-10 font-montserrat">or</div>
         <hr class="w-full border-none h-[2px] bg-[#2631591A]" />
       </div>
 
