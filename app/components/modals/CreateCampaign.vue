@@ -38,7 +38,7 @@
             class="w-full rounded-xl border p-3 placeholder:text-sm min-h-24"
           ></textarea>
 
-          <p class="text-xs text-[#67738299]">
+          <p class="text-xs gray-200">
             TownUp Pro Tip: Emphasize impact and appreciation in your messaging.
             <br /><br />
             "Donors who receive acknowledgment and clear communication of their impact are up to 70% more likely to give
@@ -55,7 +55,7 @@
             class="max-w-[350px]"
           />
 
-          <p class="text-xs text-[#67738299]">if no end date please leave this field empty</p>
+          <p class="text-xs text-gray-200">if no end date please leave this field empty</p>
         </div>
 
         <AppButton>Next <img src="~/assets/icons/arrow-bold.svg" alt="arrow" class="ml-2" /></AppButton>

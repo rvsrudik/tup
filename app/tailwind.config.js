@@ -14,10 +14,13 @@ export default {
         gray: {
           50: '#FDFEFF',
           100: '#F0F0F0',
+          200: '#67738299',
+          900: '#1A1C1F',
         },
         slate: {
           50: '#FBFBFE',
           200: '#F4F4FA',
+          500: '#5C6C83',
           700: '#5C5E83',
         },
         blue: {
@@ -31,6 +34,12 @@ export default {
         red: {
           100: '#F0E3EE',
         },
+      },
+      boxShadow: {
+        md: '0px 1px 12.3px 0px #3964711C',
+      },
+      fontFamily: {
+        montserrat: ['Montserrat'],
       },
     },
   },
