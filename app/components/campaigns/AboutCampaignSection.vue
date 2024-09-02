@@ -24,7 +24,9 @@
       </p>
     </div>
 
-    <PhotosSection />
+    <AccordionWrapper title="Photo">
+      <PhotosSection />
+    </AccordionWrapper>
 
     <div class="flex flex-col md:flex-row gap-4 justify-end">
       <AppButton size="xl" class="w-full md:w-auto"
@@ -40,4 +42,5 @@ import GoalChart from '@/components/campaigns/GoalChart';
 import DonatedPeopleWidget from '@/components/campaigns/DonatedPeopleWidget';
 import PhotosSection from './PhotosSection.vue';
 import AppButton from '@/components/ui/AppButton';
+import AccordionWrapper from '@/components/ui/AccordionWrapper.vue';
 </script>
