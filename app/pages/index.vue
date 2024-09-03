@@ -6,7 +6,7 @@
       <AboutCard class="flex-grow" />
       <PhotosCard />
     </div>
-    <CampaignsSliderSection />
+    <CampaignsSectionSlider />
 
     <CreateCampaign />
   </div>

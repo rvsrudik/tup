@@ -13,7 +13,11 @@
         </div>
       </div>
 
-      <AppInputCheckbox v-if="selectable" />
+      <AppInputCheckbox
+        :modelValue="modelValue"
+        @update:modelValue="emit('update:modelValue', $event)"
+        v-if="selectable"
+      />
     </div>
 
     <div class="flex gap-[7px] text-xs">
@@ -39,5 +43,11 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  modelValue: {
+    type: Boolean,
+    default: false,
+  },
 });
+
+const emit = defineEmits(['update:modelValue']);
 </script>

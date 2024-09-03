@@ -6,12 +6,13 @@
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <DonorCard selectable />
-      <DonorCard selectable />
-      <DonorCard selectable />
-      <DonorCard selectable />
-      <DonorCard selectable />
-      <DonorCard selectable />
+      <DonorCard
+        v-for="(donor, i) in 6"
+        :key="donor"
+        v-model="selectedDonors[i]"
+        :donor="donor"
+        :selectable="selectable"
+      />
     </div>
   </section>
 </template>
@@ -25,4 +26,6 @@ const props = defineProps({
     default: false,
   },
 });
+
+const selectedDonors = ref([]);
 </script>
