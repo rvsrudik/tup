@@ -32,11 +32,11 @@ const buttonSizes = {
 };
 
 const buttonBg = computed(() => {
-  return [props.outline ? 'bg-white' : 'bg-purple-800'];
+  return [props.outline ? 'bg-white hover:bg-blue-100' : 'bg-purple-800  hover:bg-purple-900'];
 });
 
 const buttonColor = computed(() => {
-  return [props.outline ? 'text-slate-700 hover:bg-blue-100' : 'text-gray-50'];
+  return [props.outline ? 'text-slate-700' : 'text-gray-50'];
 });
 
 const buttonBorder = computed(() => {
