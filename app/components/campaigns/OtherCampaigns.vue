@@ -15,7 +15,7 @@
       }"
     >
       <slide v-for="slide in 10" class="px-2" :key="slide">
-        <CampaignCard />
+        <OtherCampaignCard />
       </slide>
 
       <template #addons>
@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import CampaignCard from '@/components/campaigns/CampaignCard.vue';
+import OtherCampaignCard from '@/components/campaigns/OtherCampaignCard.vue';
 </script>
 
 <style scoped>

@@ -6,7 +6,7 @@
       <AboutCard class="flex-grow" />
       <PhotosCard />
     </div>
-    <CampaignsSection />
+    <CampaignsSliderSection />
 
     <CreateCampaign />
   </div>
@@ -17,6 +17,6 @@ import OrganisationCard from '@/components/profile/OrganisationCard';
 import AboutCard from '@/components/profile/AboutCard';
 import PhotosCard from '@/components/profile/PhotosCard';
 import PasswordChangeSection from '@/components/profile/PasswordChangeSection';
-import CampaignsSection from '@/components/profile/CampaignsSection';
+import CampaignsSectionSlider from '@/components/profile/CampaignsSliderSection';
 import CreateCampaign from '@/components/modals/CreateCampaign';
 </script>
