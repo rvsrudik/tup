@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxt/ui": "^2.18.4",
+    "@vee-validate/nuxt": "^4.13.2",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue3-carousel-nuxt": "^1.1.2"
