@@ -58,18 +58,18 @@ import ChatFileUploader from './ChatFileUploader';
 const MAX_FILES_PER_MESSAGE = 6;
 const uploadedFiles = ref([]);
 
-const onAddedFiles = (newFiles) => {
+function onAddedFiles(newFiles) {
   if (uploadedFiles.value.length + newFiles.length > MAX_FILES_PER_MESSAGE) {
     alert(`You can upload up to ${MAX_FILES_PER_MESSAGE} files in total.`);
     return;
   }
 
   uploadedFiles.value.push(...newFiles);
-};
+}
 
-const removeUploadedFile = (index) => {
+function removeUploadedFile(index) {
   uploadedFiles.value.splice(index, 1);
-};
+}
 </script>
 
 <style scoped>

@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-const emit = defineEmits(['added-files']);
+const emit = defineEmits(['addedFiles']);
 
 const filesExt = [
   'image/jpeg',
@@ -32,7 +32,7 @@ const filesExt = [
 
 const maxFileSize = 30 * 1024 * 1024;
 
-const onInput = (event) => {
+function onInput(event) {
   const validFiles = [...event.target.files].filter((file) => {
     return filesExt.includes(file.type) && file.size <= maxFileSize;
   });
@@ -45,5 +45,5 @@ const onInput = (event) => {
 
   emit('addedFiles', validFiles);
   event.target.value = '';
-};
+}
 </script>
