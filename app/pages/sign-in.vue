@@ -1,5 +1,4 @@
 <template>
-  <!-- ------------------------------------------------------------------------ -->
   <div class="sign-in-page w-full">
     <div class="bg-white max-w-[510px] w-full rounded-2xl p-6 lg:p-11 mx-auto">
       <Form
