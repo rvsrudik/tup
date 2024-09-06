@@ -12,6 +12,16 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ['@vee-validate/nuxt', 'vue3-carousel-nuxt', '@nuxt/ui'],
+  modules: [
+    '@vee-validate/nuxt',
+    'vue3-carousel-nuxt',
+    '@nuxt/ui',
+    '@pinia/nuxt',
+  ],
+  runtimeConfig: {
+    public: {
+      API_BASE_URL: process.env.API_BASE_URL,
+    },
+  },
   
 })

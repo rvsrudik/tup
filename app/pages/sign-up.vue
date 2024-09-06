@@ -7,18 +7,18 @@
         <h4 class="text-center mb-8">Enter your details to connect with your town</h4>
 
         <div class="flex flex-col gap-3 mb-6">
-          <AppInput name="organization_name" placeholder="Organization Name" />
+          <AppInput name="organization.name" placeholder="Organization Name" />
 
           <div class="flex gap-2">
-            <AppInput name="ein" class="w-1/2" placeholder="EIN" />
+            <AppInput name="organization.ein" class="w-1/2" placeholder="EIN" />
             <AppInputFile class="w-1/2" />
           </div>
 
           <AppInput name="email" placeholder="Email" />
-          <AppInput name="contact_name" placeholder="Сontact name" />
-          <AppInput name="contact_number" placeholder="Contact number" />
+          <AppInput name="name" placeholder="Сontact name" />
+          <AppInput name="phone" placeholder="Contact number" />
           <AppInput name="password" placeholder="Create password" />
-          <AppInput name="confirm_password" placeholder="Confirm password" />
+          <AppInput name="password_confirmation" placeholder="Confirm password" />
         </div>
 
         <div class="gap-4 flex flex-col mb-6">
@@ -57,28 +57,54 @@
 <script setup>
 import { Form } from 'vee-validate';
 import * as Yup from 'yup';
+const { signUp } = useAPI();
 import AppInput from '@/components/ui/AppInput';
 import AppInputFile from '@/components/ui/AppInputFile';
 import AppInputCheckbox from '@/components/ui/AppInputCheckbox';
 import AppButton from '@/components/ui/AppButton';
 
+const loading = ref({
+  submit: false,
+});
+
+const phoneRegExp =
+  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
 const schema = Yup.object().shape({
-  organization_name: Yup.string().required().label('Organization name'),
-  ein: Yup.string().required().label('EIN'),
   email: Yup.string().email().required().label('Email'),
-  contact_name: Yup.string().required().label('Contact name'),
-  contact_number: Yup.string().required().label('Contact number'),
-  password: Yup.string().min(6).required().label('Password'),
-  confirm_password: Yup.string()
+  name: Yup.string().required().max(255).label('Contact name'),
+  phone: Yup.string().required().matches(phoneRegExp, 'Phone number is not valid'),
+  password: Yup.string().min(8).required().label('Password'),
+  password_confirmation: Yup.string()
     .required()
     .oneOf([Yup.ref('password')], 'Passwords do not match')
     .label('Confirm password'),
+
+  organization: Yup.object().shape({
+    name: Yup.string().label('Organization name'),
+    ein: Yup.string().label('EIN'),
+  }),
   reveice_emails: Yup.boolean(),
   terms_and_conditions: Yup.boolean().required(),
 });
 
-function onSubmit(values) {
+async function onSubmit(values) {
   console.log('on submit', values);
+
+  loading.value.submit = true;
+
+  const { data, error } = await signUp(values);
+  loading.value = false;
+
+  if (error.value) {
+    return;
+  }
+
+  console.log('response', response);
+  localStorage.setItem('token', data.value?.data?.access_token || '');
+
+  // await authStore.getMe();
+  router.push({ path: '/' });
 }
 
 function onInvalidSubmit() {
