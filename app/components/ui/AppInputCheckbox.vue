@@ -1,5 +1,5 @@
 <template>
-  <div class="text-sm flex gap-[10px] items-center">
+  <div class="text-xs sm:text-sm flex gap-[10px] items-center">
     <input
       type="checkbox"
       class="w-4 h-4 accent-purple-800"
@@ -8,7 +8,12 @@
       :checked="modelValue"
       @change="onChange"
     />
-    <label v-if="label" :class="[errorMessage ? 'text-red-400' : '']" :for="name">{{ label }}</label>
+    <label
+      v-if="label"
+      :class="[errorMessage ? 'text-red-400' : '']"
+      :for="name"
+      >{{ label }}</label
+    >
   </div>
 </template>
 

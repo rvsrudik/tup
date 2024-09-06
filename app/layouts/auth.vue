@@ -1,6 +1,10 @@
 <template>
-  <div class="bg-purple-900 min-h-screen p-6 lg:p-12 xl:p-16 2xl:p-36">
-    <div class="flex flex-col md:flex-row items-center md:items-start xl:gap-36">
+  <div
+    class="flex flex-col justify-center bg-purple-900 min-h-screen p-6 lg:p-12 xl:p-16 2xl:p-36 overflow-hidden"
+  >
+    <div
+      class="flex flex-col md:flex-row items-center md:items-start xl:gap-36"
+    >
       <div class="md:w-1/2 text-white flex justify-center relative">
         <img
           src="~/assets/images/logo.svg"
@@ -27,7 +31,7 @@
           class="absolute hidden md:block top-[95%]"
         />
       </div>
-      <div class="lg:w-1/2 flex justify-center">
+      <div class="w-full lg:w-1/2 flex justify-center flex-grow">
         <slot />
       </div>
     </div>
