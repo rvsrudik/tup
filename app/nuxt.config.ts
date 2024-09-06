@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   css: ['~/assets/css/main.css'],
+  colorMode: {
+    preference: 'light'
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
