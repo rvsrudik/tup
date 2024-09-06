@@ -103,7 +103,7 @@ async function onSubmit(values) {
   console.log('response', response);
   localStorage.setItem('token', data.value?.data?.access_token || '');
 
-  // await authStore.getMe();
+  await authStore.getMe();
   router.push({ path: '/' });
 }
 

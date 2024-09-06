@@ -1,22 +1,22 @@
-import { useAuthStore } from '@/stores/AuthStore';
+// import { useAuthStore } from '@/stores/AuthStore';
 
 export default function useAPI() {
   return {
     // auth
-    // signIn,
+    signIn,
     signUp,
-    // logout,
-    // refresh,
-    // me,
+    logout,
+    refresh,
+    me,
   };
 }
 
 // auth
-// const signIn = async (body) => await myFetch('/auth/login', { method: 'post', body, noHeader: true });
+const signIn = async (body) => await myFetch('/auth/login', { method: 'post', body, noHeader: true });
 const signUp = async (body) => await myFetch('/auth/register', { method: 'post', body, noHeader: true });
-// const logout = async () => await myFetch('/auth/logout', { method: 'post', logout: true });
-// const refresh = async () => await myFetch('/auth/refresh', { method: 'post', logout: true });
-// const me = async () => await myFetch('/auth/me');
+const logout = async () => await myFetch('/auth/logout', { method: 'post', logout: true });
+const refresh = async () => await myFetch('/auth/refresh', { method: 'post', logout: true });
+const me = async () => await myFetch('/auth/me');
 
 // interceptor
 const myFetch = (url, options = {}) => {
@@ -47,7 +47,7 @@ const myFetch = (url, options = {}) => {
       // const { logout } = useAuthStore();
 
       // if (response.status === 401 && !options.logout) {
-      // logout();
+      //   logout();
       // }
     },
   });
