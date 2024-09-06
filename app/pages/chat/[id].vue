@@ -2,7 +2,7 @@
   <!-- <div>hello</div>
   {{ message }}
   <AppButton @click="foo">add</AppButton> -->
-  <div class="flex flex-col gap-6 min-h-full h-full" style="height: 600px">
+  <div class="flex flex-col gap-6 min-h-full h-full">
     <ChatWindow> </ChatWindow> <ChatInput />
   </div>
 </template>
