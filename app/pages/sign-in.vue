@@ -8,7 +8,9 @@
       >
         <h1 class="mb-4">Sign in</h1>
 
-        <h4 class="text-center mb-8">Enter your details to sign in</h4>
+        <h4 class="text-sm sm:text-base text-center mb-8">
+          Enter your details to sign in
+        </h4>
 
         <div class="flex flex-col gap-3 mb-6">
           <AppInput name="email" placeholder="Email" />
