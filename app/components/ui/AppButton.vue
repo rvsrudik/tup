@@ -1,13 +1,18 @@
 <template>
   <button
-    class="px-10 h-12 rounded-[120px] text-gray-50 flex items-center justify-center w-fit"
+    class="relative px-10 h-12 rounded-[120px] text-gray-50 flex items-center justify-center w-fit"
     :class="[...buttonBg, ...buttonColor, ...buttonBorder, ...buttonShadow, ...buttonSizes[size]]"
   >
-    <slot>{{ title }}</slot>
+    <div :class="isLoading ? 'opacity-0' : 'opacity-100'" class="flex transition-opacity duration-300">
+      <slot>{{ title }}</slot>
+    </div>
+    <Loader v-if="isLoading" :color="outline ? '#733E84' : '#fff'" />
   </button>
 </template>
 
 <script setup>
+import Loader from './Loader.vue';
+
 const props = defineProps({
   title: {
     type: String,
@@ -21,6 +26,10 @@ const props = defineProps({
     default: false,
   },
   shadow: {
+    type: Boolean,
+    default: false,
+  },
+  isLoading: {
     type: Boolean,
     default: false,
   },
