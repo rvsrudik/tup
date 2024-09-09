@@ -44,6 +44,7 @@ const myFetch = (url, options = {}) => {
       //     'Something went wrong',
       //   color: 'red',
       // });
+
       // const { logout } = useAuthStore();
 
       // if (response.status === 401 && !options.logout) {

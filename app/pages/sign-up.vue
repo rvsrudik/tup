@@ -1,16 +1,10 @@
 <template>
   <div class="sign-up-page">
     <div class="bg-white max-w-[510px] rounded-2xl p-6 lg:p-11">
-      <Form
-        :validation-schema="schema"
-        @submit="onSubmit"
-        @invalid-submit="onInvalidSubmit"
-      >
+      <Form :validation-schema="schema" @submit="onSubmit" @invalid-submit="onInvalidSubmit">
         <h1 class="mb-4">Sign Up</h1>
 
-        <h4 class="text-sm sm:text-base text-center mb-8">
-          Enter your details to connect with your town
-        </h4>
+        <h4 class="text-sm sm:text-base text-center mb-8">Enter your details to connect with your town</h4>
 
         <div class="flex flex-col gap-3 mb-6">
           <AppInput name="organization.name" placeholder="Organization Name" />
@@ -28,11 +22,7 @@
         </div>
 
         <div class="gap-4 flex flex-col mb-6">
-          <AppInputCheckbox
-            name="reveice_emails"
-            value="1"
-            label="Yes, I would like to receive emails"
-          />
+          <AppInputCheckbox name="reveice_emails" value="1" label="Yes, I would like to receive emails" />
           <AppInputCheckbox
             name="terms_and_conditions"
             value="1"
@@ -40,7 +30,7 @@
           />
         </div>
 
-        <AppButton size="xl" title="Sign Up" class="w-full mb-6" />
+        <AppButton :is-loading="loading.submit" size="xl" title="Sign Up" class="w-full mb-6" />
       </Form>
 
       <div class="text-sm text-center mb-6">
@@ -54,11 +44,7 @@
       </div>
 
       <AppButton size="xl" outline shadow class="w-full mb-4">
-        <img
-          src="~/assets/icons/facebook.svg"
-          alt="facebook-logo"
-          class="mr-2"
-        />
+        <img src="~/assets/icons/facebook.svg" alt="facebook-logo" class="mr-2" />
         Login with Facebook
       </AppButton>
       <AppButton size="xl" outline shadow class="w-full">
@@ -105,7 +91,6 @@ const schema = Yup.object().shape({
 
 async function onSubmit(values) {
   console.log('on submit', values);
-
   loading.value.submit = true;
 
   const { data, error } = await signUp(values);
